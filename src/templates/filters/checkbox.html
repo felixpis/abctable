@@ -1,0 +1,4 @@
+<label ng-click="$ctrl.filterCheck(column)" style="cursor:pointer;" title="{{column.filter.tooltip}}">
+    <i class="fa fa-2x" ng-class="{'fa-check-square-o': column.filter.value, 'fa-square-o': !column.filter.value}"></i>
+   {{column.filter.label}}
+</label>

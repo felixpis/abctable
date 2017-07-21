@@ -1,0 +1,35 @@
+<div class="abc-table">
+    <div class="toolbar" ng-hide="$ctrl.options.hideToolbar">
+        <div class="items-count">
+            <span>{{$ctrl.filteredData.length}} of </span><span>{{$ctrl.data.length}}</span>
+        </div>
+        <ul uib-pagination total-items="$ctrl.filteredData.length" ng-model="$ctrl.currentPage" items-per-page="$ctrl.options.pageSize"
+            max-size="15"></ul>
+    </div>
+    <div class="table-responsive">
+        <table class="{{$ctrl.options.class}}">
+            <tr  ng-hide="$ctrl.options.hideHeader">
+                <th ng-repeat="column in $ctrl.columns" ng-if="!column.hidden" ng-init="$ctrl.initColumn(column)" ng-style="column.style">
+                    <input type="checkbox" class="checkbox" ng-if="column.type == 'checkbox'" ng-checked="$ctrl.isAllchecked()" ng-click="$ctrl.checkAll()"></input>
+                    <span ng-if="column.type != 'checkbox'" ng-click="$ctrl.sort(column.field)" class="title" ng-class="{'title-sorted': $ctrl.options.sort.field == column.field}">{{column.title}}</span>
+                </th>
+            </tr>
+            <tr ng-if="$ctrl.options.showAggRow">
+                <td ng-repeat="column in $ctrl.columns" ng-if="!column.hidden">
+                    <div ng-if="column.aggs.enabled" ng-include="$ctrl.getAggsTemplateUrl(column)"></div>
+                </td>
+            </tr>
+            <tr ng-if="$ctrl.options.showFilter">
+                <td ng-repeat="column in $ctrl.columns" ng-if="!column.hidden">
+                    <div ng-if="column.filter.enabled" ng-include="$ctrl.getFilterTemplateUrl(column)"></div>
+                </td>
+            </tr>
+            <tr ng-repeat="item in ($ctrl.filteredData = ($ctrl.data | abcFilterData:$ctrl.columns:$ctrl.options.externalFilter | orderBy: $ctrl.options.sort.field:$ctrl.options.sort.reverse) | abcSlice:$ctrl.fromItem():$ctrl.toItem()) track by $index"
+                ng-class="$ctrl.rowStyle(item)" ng-init="rowIndex = $index; prev = $ctrl.filteredData[rowIndex - 1]; next = $ctrl.filteredData[rowIndex + 1]">
+                <td ng-repeat="column in $ctrl.columns"  ng-if="!column.hidden" class="{{$ctrl.getCellClass(column, item)}}" ng-dblclick="$ctrl.showEditMode(item, column)">
+                    <ng-include src="$ctrl.getTemplateUrl(column, item)"></ng-include>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<span ng-if="column.showPreview">
+    <a ng-if="!!item[column.field]" abc-link-image-preview ng-href="{{item[column.field]}}" target="_blank">{{$ctrl.linkCellText(item, column)}}</a>
+</span>
+<span ng-if="!column.showPreview">
+    <a ng-if="!!item[column.field]" ng-href="{{item[column.field]}}" target="_blank">{{$ctrl.linkCellText(item, column)}}</a>
+</span>

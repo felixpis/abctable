@@ -1,0 +1,13 @@
+<ui-select ng-if="column.filter.list != null" multiple ng-model="column.filter.values" theme="bootstrap" sortable="true" on-select="$ctrl.filterSelect()" on-remove="$ctrl.filterSelect()">
+    <ui-select-match>{{$item}}</ui-select-match>
+    <ui-select-choices repeat="item in column.filter.list | filter: $select.search | limitTo: 100">
+      <div ng-bind-html="item | highlight: $select.search"></div>
+    </ui-select-choices>
+  </ui-select>
+
+  <ui-select ng-if="column.filter.list == null" multiple tagging tagging-label="false" ng-model="column.filter.values" theme="bootstrap" sortable="true" on-select="$ctrl.filterSelect()" on-remove="$ctrl.filterSelect()">
+    <ui-select-match>{{$item}}</ui-select-match>
+    <ui-select-choices repeat="item in [] | filter: $select.search">
+      <div ng-bind-html="item | highlight: $select.search"></div>
+    </ui-select-choices>
+  </ui-select>

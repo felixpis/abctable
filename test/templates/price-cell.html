@@ -1,0 +1,5 @@
+<span>
+    {{item[column.field] | currency:column.symbol}}
+</span>
+<button type="button" class="btn-warning" ng-if="!item.Quote && !item.Price" uib-tooltip="Request a quote">{{column.symbol}}</button>
+<span style="font-style:italic; color:gray" ng-if="item.Quote && !item.Price">**Need price</span>

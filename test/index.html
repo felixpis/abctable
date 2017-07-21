@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test ABC table</title>
+
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="/bower_components/angular-ui-select/dist/select.css" rel="stylesheet">
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+  <link href="/test/style.css" rel="stylesheet">
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div role="main" ng-controller="mainController as vm">
+    <abc-table columns="vm.columns" data="vm.data" options="vm.options"></abc-table>
+  </div>
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="/bower_components/angular-ui-select/dist/select.js"></script>
+  <script src="/test/app.js"></script>
+  <script src="/src/module.js"></script>
+  <script src="/src/component.js"></script>
+  <script src="/src/services/templates.factory.js"></script>
+  <script src="/src/services/checkboxes.factory.js"></script>
+  <script src="/src/services/filtersaggs.factory.js"></script>
+  <script src="/src/filters.js"></script>
+  <script src="/src/directives.js"></script>
+  <script src="/.tmp/templates.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+<span ng-if="!column.aggs.values">
+    {{column.aggs.value | currency:column.symbol}}
+</span>
+<span ng-if="column.aggs.values" ng-repeat="value in column.aggs.values track by $index">
+    <br ng-if="$index > 0" /> {{value | currency: column.symbol}}
+</span>

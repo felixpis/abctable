@@ -1,0 +1,1 @@
+<select class="form-control" ng-model="item.editValue" ng-keydown="$ctrl.onSpecialKey(item, column, rowIndex, $index, $event)" ng-options="field for field in column.editValues" ng-blur="$ctrl.fieldUpdated(item, column)" focus-me="$ctrl.isEditMode(item, column)"></select>
