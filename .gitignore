@@ -4,4 +4,4 @@ typings
 .vscode
 .idea
 .tmp
-.dist
+dist

@@ -5,7 +5,7 @@
 ## Features
 * Simple and lightweight table based grid working with [angularjs](https://angularjs.org/)
 * Multiple filters based on [angular-ui-select](https://angular-ui.github.io/ui-select/)
-* Build-in aggregation functions (sum, avg, unique) with easy configuration
+* Build-in aggregation functions (sum, average, unique) with easy configuration
 * Cell templates support (text, number, date, currency, checkbox, link and custom)
 * Inline editing support with templates (text, number, select and custom)
 * Using [bootstrap](http://getbootstrap.com) style snippets
@@ -15,13 +15,13 @@
 
 ## Build
 ```sh
-git clone https://piskunov.visualstudio.com/DefaultCollection/AlternateSystem/_git/abctable
+git clone https://github.com/felixpis/abctable.git
 cd abctable
 npm install
 bower install
 gulp run build
 ```
-Build generates two files in folder `.dist`: `abctable.js` and `abctable.css`
+Build generates two files in folder `dist`: `abctable.js` and `abctable.css`
 
 (For development run `gulp`)
 

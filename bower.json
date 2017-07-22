@@ -1,15 +1,29 @@
 {
   "name": "abc-table",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "The ultimate grid/table component for angularjs application",
+  "main": ".dist/abctable.js",
+  "keywords": [
+    "angularjs",
+    "grid",
+    "table"
+  ],
+  "authors": [
+    "Felix Piskunov <felix.piskunov@gmail.com>"
+  ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/felixpis/abctable",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    ".gitignore",
+    "gulpfile.js",
+    "src",
+    "jsconfig.json",
+    "typings.json"
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",

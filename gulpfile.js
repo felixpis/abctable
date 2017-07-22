@@ -12,7 +12,7 @@ var config = {
     scripts: './src/**/*.js',
     templatesRoot: '/src/',
     tmpDest: './.tmp',
-    dist: './.dist',
+    dist: './dist',
     scriptName: 'abctable.js',
     stylesName: 'abctable.css'
 };
