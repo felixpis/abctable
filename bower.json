@@ -20,8 +20,10 @@
     "test",
     "tests",
     ".gitignore",
+    "package.json",
     "gulpfile.js",
     "src",
+    "README.md",
     "jsconfig.json",
     "typings.json"
   ],
