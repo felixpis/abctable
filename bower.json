@@ -1,6 +1,6 @@
 {
   "name": "abctable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The ultimate grid/table component for angularjs application",
   "main": ".dist/abctable.js",
   "keywords": [
