@@ -1,13 +1,17 @@
 {
   "name": "abctable",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.1",
+  "description": "The ultimate grid/table component for angularjs application",
+  "main": "dist/abctable.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Felix Piskunov <felix.piskunov@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/felixpis/abctable.git",
+    "type": "git"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-angular-filesort": "^1.1.1",

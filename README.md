@@ -13,18 +13,15 @@
 * Conditional row/cell styling
 * Keyboard integration (`ENTER`/`TAB`/`ESC`)
 
-## Build
+## Install
+### npm
 ```sh
-git clone https://github.com/felixpis/abctable.git
-cd abctable
-npm install
-bower install
-gulp run build
+npm install abctable
 ```
-Build generates two files in folder `dist`: `abctable.js` and `abctable.css`
-
-(For development run `gulp`)
-
+### bower
+```sh
+bower install abctable
+```
 ## Dependencies
 * [AngularJS](https://angularjs.org/)
 * angular-sanitize
@@ -107,6 +104,23 @@ $http.get('/test/data.json').then(function (response) {
     vm.data = response.data;
 })
 ```
+## Development
+```sh
+git clone https://github.com/felixpis/abctable.git
+cd abctable
+npm install
+bower install
+```
+Then run gulp task to start server and file change watcher:
+```sh
+gulp
+```
+To build files run:
+```sh
+gulp build
+```
+Build generates two files in folder `dist`: `abctable.js` and `abctable.css`
+
 ***
 ## Todo
 1. Build demo page

@@ -1,0 +1,8 @@
+src
+test
+.gitignore
+bower.json
+gulpfile.js
+jsconfig.json
+README.md
+typings.json
